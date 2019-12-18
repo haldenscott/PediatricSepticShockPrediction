@@ -15,23 +15,22 @@ This resulted in AUROC of 0.79 (0.76-0.83) for the temporal training set 0.75 (0
 Final model for the prediction of septic shock among patients in whom ED clinicians were concerned for sepsis at the time of ED arrival. The model is a linear predictor that estimates the log odds of septic shock, using the sum of the intercept and the predictors multiplied by their coefficient. To transform the odds of septic shock to a probability, use the transformation e^xB/(1+e^xB).
 
 
-Intercept	                               5.033
-Systolic blood pressure, mmHg	           -0.0283
+Intercept	                               5.033; Systolic blood pressure, mmHg	           -0.0283;
 Piecewise diastolic blood pressure term:
 If >=69 mmHg, set to 0
-If <69 mmHg, set to 69-DBP	              0.0270
-Temperature, °C	                         -0.1344
+If <69 mmHg, set to 69-DBP	              0.0270;
+Temperature, °C	                         -0.1344;
 Age, years * respiratory rate, breaths per minute	
-                                          0.0017
+                                          0.0017;
 Age, years * shock index, beat per minute/mmHg	
-                                          0.0733
+                                          0.0733;
 Arrival via EMS	
-                                          0.3280
-Oncological comorbidity                  -0.9967
+                                          0.3280;
+Oncological comorbidity                  -0.9967;
 Indwelling central line present on arrival
-                                         -0.2177
-Hospitalized in the last year	           -0.3078
+                                         -0.2177;
+Hospitalized in the last year	           -0.3078;
 
-Shock index = HR/SBP
+(Shock index = HR/SBP)
 
 The PMML code of the model was developed in order to facilitate implementation and testing of the model in Electronic Health Record software.
