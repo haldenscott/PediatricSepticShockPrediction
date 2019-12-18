@@ -1,7 +1,7 @@
 # PediatricSepticShockPrediction
-Models for predicting the risk of septic shock in the first 24 hours among children in whom there is clinical concern for sepsis in the emergency setting
+Models for predicting the risk of septic shock in the first 24 hours among children (60 days - 18 years) in whom there is clinical concern for sepsis in the emergency setting. These models are intended for reasearch only and do not represent medical advice. These models are intended to estimate risk in children after a clinician has already indicated a concern for potential sepsis; they are not intended to be sniffers, finding patients with sepsis when clinicians are not concerned.
 
-Our first model predicting septic shock using only data available in the Electronic Health Record at the time of hospital arrival was published in the Journal of Pediatrics, where full text is available: 
+Our first model predicting septic shock using only data available in the Electronic Health Record at the time of hospital arrival was published in the Journal of Pediatrics, where full text of all of the methods, including population characteristics and intended clinical use, is available: 
 
 Scott HF, Colborn KL, Sevick CJ, Bajaj, L, Kissoon N, Deakyne-Davies SJ, Kempe A. Development and Validation of a Predictive Model of the Risk of Pediatric Septic Shock Using Data Known at the Time of Hospital Arrival. Journal of Pediatrics. 2019 (ePublished ahead of print)
 
@@ -10,7 +10,7 @@ This model produced an AUROC of 0.79 (0.76-0.83) in the training set, 0.75 (0.69
 We have since updated this model. In our new procedure, we used the same datasets, but followed the following statistical procedure:
 We used the glmnet package in R with a logit link, binomial distribution and the lasso algorithm for variable reduction. Then, using only the predictors identified through the lasso procedure, we used logistic regression to estimate the coefficients of the predictors in the model.
 
-This resulted in AUROC of 0.79 (0.76-0.83) for the temporal training set 0.75 (0.69-0.81) and 0.85 (0.71-0.99). The calibration was improved with the new model. The model is as follows:
+This resulted in AUROC of 0.79 (0.76-0.83) for the temporal training set 0.75 (0.69-0.81) and 0.85 (0.71-0.99). The calibration was improved with the new model. A full report of the performance of the model is in the attached documentation. The model is as follows:
 
 Final model for the prediction of septic shock among patients in whom ED clinicians were concerned for sepsis at the time of ED arrival. The model is a linear predictor that estimates the log odds of septic shock, using the sum of the intercept and the predictors multiplied by their coefficient. To transform the odds of septic shock to a probability, use the transformation e^xB/(1+e^xB).
 
