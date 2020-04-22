@@ -1,9 +1,14 @@
 # PediatricSepticShockPrediction
-This is a record of our models for predicting the risk of septic shock in the first 24 hours among children (60 days - 18 years) in whom there is clinical concern for sepsis in the emergency setting. These models are intended for reasearch only and do not represent medical advice. These models are intended to estimate risk in children after a clinician has already indicated a concern for potential sepsis; they are not intended to be sniffers, finding patients with sepsis when clinicians are not concerned.
+This is a record of our models for predicting the risk of septic shock in the first 24 hours among children (60 days - 18 years) in whom there is clinical concern for sepsis in the emergency setting. These models are intended for reasearch only and do not represent medical advice. These models are intended to estimate risk in children after a clinician has already indicated a concern for potential sepsis; they are not intended to be sniffers. They do not find patients with sepsis when clinicians are not concerned, but are intended to provide decision support when a clinician begins to worry about sepsis and is not sure how likely it is or the next steps to take.
+
+Study Team: Halden F. Scott, Kathryn L. Colborn, Carter J. Sevick, Lalit Bajaj, Niranjan Kissoon, Sara J. Deakyne Davies, Allison Kempe
+Supported by funding from AHRQ K08HS025696
 
 1.  Our first model predicting septic shock using only data available in the Electronic Health Record at the time of hospital arrival was published in the Journal of Pediatrics, where full text of all of the methods, including population characteristics and intended clinical use, is available. This model was derived using an elastic net procedure: 
 
-	Scott HF, Colborn KL, Sevick CJ, Bajaj, L, Kissoon N, Deakyne-Davies SJ, Kempe A. Development and Validation of a Predictive Model of the Risk of Pediatric Septic Shock Using Data Known at the Time of Hospital Arrival. Journal of Pediatrics. 2019 (ePublished ahead of print)
+	Scott HF, Colborn KL, Sevick CJ, Bajaj, L, Kissoon N, Deakyne-Davies SJ, Kempe A. Development and Validation of a Predictive Model of the Risk of Pediatric Septic Shock Using Data Known at the Time of Hospital Arrival. Journal of Pediatrics. 2020 Feb; 217:145-151. 
+	
+	https://www.jpeds.com/article/S0022-3476(19)31317-4/fulltext
 
 	This model produced an AUROC of 0.79 (0.76-0.83) in the training set, 0.75 (0.69-0.81) in the temporal test set and 0.87 (0.72-0.90) in the geographic test set, with additional characteristics described in the article.
 
