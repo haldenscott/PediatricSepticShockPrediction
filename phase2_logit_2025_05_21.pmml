@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<PMML version="4.4.1" xmlns="http://www.dmg.org/PMML-4_4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_4 http://www.dmg.org/pmml/v4-4/pmml-4-4.xsd">
+ <Header copyright="Copyright (c) 2025 sevickc" description="Generalized Linear Regression Model">
+  <Extension name="user" value="sevickc" extender="SoftwareAG PMML Generator"/>
+  <Application name="SoftwareAG PMML Generator" version="2.5.2"/>
+  <Timestamp>2025-05-21 14:36:01.754895</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="21">
+  <DataField name="rss" optype="continuous" dataType="double"/>
+  <DataField name="comorb_oncYes" optype="continuous" dataType="double"/>
+  <DataField name="hosp_lastyearYes" optype="continuous" dataType="double"/>
+  <DataField name="sbp_ini" optype="continuous" dataType="double"/>
+  <DataField name="sbp_last_2" optype="continuous" dataType="double"/>
+  <DataField name="lactCat_nrm" optype="continuous" dataType="double"/>
+  <DataField name="creatCat_hi" optype="continuous" dataType="double"/>
+  <DataField name="altCat_hi" optype="continuous" dataType="double"/>
+  <DataField name="biliCat_msr" optype="continuous" dataType="double"/>
+  <DataField name="bandsCat_hi" optype="continuous" dataType="double"/>
+  <DataField name="bandsCat_nrm" optype="continuous" dataType="double"/>
+  <DataField name="ancCat_low" optype="continuous" dataType="double"/>
+  <DataField name="hgbCat_abn" optype="continuous" dataType="double"/>
+  <DataField name="bunCat_hi" optype="continuous" dataType="double"/>
+  <DataField name="albCat_low" optype="continuous" dataType="double"/>
+  <DataField name="glucCat_hi" optype="continuous" dataType="double"/>
+  <DataField name="centralLineYes" optype="continuous" dataType="double"/>
+  <DataField name="dbpDbpLastLt70" optype="continuous" dataType="double"/>
+  <DataField name="ageHR" optype="continuous" dataType="double"/>
+  <DataField name="ageRR" optype="continuous" dataType="double"/>
+  <DataField name="shockAge" optype="continuous" dataType="double"/>
+ </DataDictionary>
+ <GeneralRegressionModel modelName="General_Regression_Model" modelType="generalizedLinear" functionName="regression" algorithmName="glm" distribution="binomial" linkFunction="logit">
+  <MiningSchema>
+   <MiningField name="rss" usageType="predicted" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="comorb_oncYes" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="hosp_lastyearYes" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="sbp_ini" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="sbp_last_2" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="lactCat_nrm" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="creatCat_hi" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="altCat_hi" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="biliCat_msr" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="bandsCat_hi" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="bandsCat_nrm" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="ancCat_low" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="hgbCat_abn" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="bunCat_hi" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="albCat_low" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="glucCat_hi" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="centralLineYes" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="dbpDbpLastLt70" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="ageHR" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="ageRR" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="shockAge" usageType="active" invalidValueTreatment="returnInvalid"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Predicted_rss" feature="predictedValue" optype="continuous" dataType="double"/>
+  </Output>
+  <ParameterList>
+   <Parameter name="p0" label="(Intercept)"/>
+   <Parameter name="p1" label="comorb_oncYes"/>
+   <Parameter name="p2" label="hosp_lastyearYes"/>
+   <Parameter name="p3" label="sbp_ini"/>
+   <Parameter name="p4" label="sbp_last_2"/>
+   <Parameter name="p5" label="lactCat_nrm"/>
+   <Parameter name="p6" label="creatCat_hi"/>
+   <Parameter name="p7" label="altCat_hi"/>
+   <Parameter name="p8" label="biliCat_msr"/>
+   <Parameter name="p9" label="bandsCat_hi"/>
+   <Parameter name="p10" label="bandsCat_nrm"/>
+   <Parameter name="p11" label="ancCat_low"/>
+   <Parameter name="p12" label="hgbCat_abn"/>
+   <Parameter name="p13" label="bunCat_hi"/>
+   <Parameter name="p14" label="albCat_low"/>
+   <Parameter name="p15" label="glucCat_hi"/>
+   <Parameter name="p16" label="centralLineYes"/>
+   <Parameter name="p17" label="dbpDbpLastLt70"/>
+   <Parameter name="p18" label="ageHR"/>
+   <Parameter name="p19" label="ageRR"/>
+   <Parameter name="p20" label="shockAge"/>
+  </ParameterList>
+  <FactorList/>
+  <CovariateList>
+   <Predictor name="comorb_oncYes"/>
+   <Predictor name="hosp_lastyearYes"/>
+   <Predictor name="sbp_ini"/>
+   <Predictor name="sbp_last_2"/>
+   <Predictor name="lactCat_nrm"/>
+   <Predictor name="creatCat_hi"/>
+   <Predictor name="altCat_hi"/>
+   <Predictor name="biliCat_msr"/>
+   <Predictor name="bandsCat_hi"/>
+   <Predictor name="bandsCat_nrm"/>
+   <Predictor name="ancCat_low"/>
+   <Predictor name="hgbCat_abn"/>
+   <Predictor name="bunCat_hi"/>
+   <Predictor name="albCat_low"/>
+   <Predictor name="glucCat_hi"/>
+   <Predictor name="centralLineYes"/>
+   <Predictor name="dbpDbpLastLt70"/>
+   <Predictor name="ageHR"/>
+   <Predictor name="ageRR"/>
+   <Predictor name="shockAge"/>
+  </CovariateList>
+  <PPMatrix>
+   <PPCell value="1" predictorName="comorb_oncYes" parameterName="p1"/>
+   <PPCell value="1" predictorName="hosp_lastyearYes" parameterName="p2"/>
+   <PPCell value="1" predictorName="sbp_ini" parameterName="p3"/>
+   <PPCell value="1" predictorName="sbp_last_2" parameterName="p4"/>
+   <PPCell value="1" predictorName="lactCat_nrm" parameterName="p5"/>
+   <PPCell value="1" predictorName="creatCat_hi" parameterName="p6"/>
+   <PPCell value="1" predictorName="altCat_hi" parameterName="p7"/>
+   <PPCell value="1" predictorName="biliCat_msr" parameterName="p8"/>
+   <PPCell value="1" predictorName="bandsCat_hi" parameterName="p9"/>
+   <PPCell value="1" predictorName="bandsCat_nrm" parameterName="p10"/>
+   <PPCell value="1" predictorName="ancCat_low" parameterName="p11"/>
+   <PPCell value="1" predictorName="hgbCat_abn" parameterName="p12"/>
+   <PPCell value="1" predictorName="bunCat_hi" parameterName="p13"/>
+   <PPCell value="1" predictorName="albCat_low" parameterName="p14"/>
+   <PPCell value="1" predictorName="glucCat_hi" parameterName="p15"/>
+   <PPCell value="1" predictorName="centralLineYes" parameterName="p16"/>
+   <PPCell value="1" predictorName="dbpDbpLastLt70" parameterName="p17"/>
+   <PPCell value="1" predictorName="ageHR" parameterName="p18"/>
+   <PPCell value="1" predictorName="ageRR" parameterName="p19"/>
+   <PPCell value="1" predictorName="shockAge" parameterName="p20"/>
+  </PPMatrix>
+  <ParamMatrix>
+   <PCell parameterName="p0" df="1" beta="1.88186191626309"/>
+   <PCell parameterName="p1" df="1" beta="-0.768794308511124"/>
+   <PCell parameterName="p2" df="1" beta="-0.539831544638039"/>
+   <PCell parameterName="p3" df="1" beta="-0.0357348952755685"/>
+   <PCell parameterName="p4" df="1" beta="-0.0173593024222244"/>
+   <PCell parameterName="p5" df="1" beta="-0.492663377757692"/>
+   <PCell parameterName="p6" df="1" beta="0.578430176438578"/>
+   <PCell parameterName="p7" df="1" beta="0.547679551230441"/>
+   <PCell parameterName="p8" df="1" beta="0.384517626785686"/>
+   <PCell parameterName="p9" df="1" beta="0.788387710200163"/>
+   <PCell parameterName="p10" df="1" beta="-0.178252267458676"/>
+   <PCell parameterName="p11" df="1" beta="-0.314929876967979"/>
+   <PCell parameterName="p12" df="1" beta="-1.20053601843654"/>
+   <PCell parameterName="p13" df="1" beta="0.27573504717535"/>
+   <PCell parameterName="p14" df="1" beta="0.853043788832937"/>
+   <PCell parameterName="p15" df="1" beta="0.284901674769205"/>
+   <PCell parameterName="p16" df="1" beta="-0.44666667594291"/>
+   <PCell parameterName="p17" df="1" beta="-0.0356360240246986"/>
+   <PCell parameterName="p18" df="1" beta="0.00189792893196368"/>
+   <PCell parameterName="p19" df="1" beta="0.00176101416452691"/>
+   <PCell parameterName="p20" df="1" beta="-0.0987115558131062"/>
+  </ParamMatrix>
+ </GeneralRegressionModel>
+</PMML>
