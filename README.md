@@ -35,4 +35,4 @@ Supported by funding from AHRQ K08HS025696
 		Hospitalized in the last year	           -0.3078;
 		(Shock index = HR/SBP)
 
-3.	The PMML code of this second model (variable selection via lasso, coefficients derived via logistic regression) was developed in order to facilitate implementation and testing of the model in Electronic Health Record software.
+3.	The PMML code of this second model (variable selection via lasso, coefficients derived via logistic regression) was developed in order to facilitate implementation and testing of the model in Electronic Health Record software. This model and its performance are described in the paper: https://pmc.ncbi.nlm.nih.gov/articles/PMC7790844/ Model perfomance was: area under the receiver operating curve in the training set of 0.85 (0.82-0.88); 0.83 [0.78-0.89] in the temporal test set; 0.83 [0.60-1.00] in the geographic test set. Sensitivity and specificity varied based on cutpoint; when sensitivity in the training set was set to 90% (83%, 94%), specificity was 62% (60%, 65%).
